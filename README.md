@@ -1,6 +1,6 @@
 # 08-PhotoPickBlender
 
-Select two images from photo library to blendas background and foreground using Vision VNGeneratePersonSegmentationRequest
+Select two images from photo library to blend as background and foreground using Vision VNGeneratePersonSegmentationRequest
 
 ## Source
 
