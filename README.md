@@ -12,6 +12,8 @@ Select two images from photo library to blend as background and foreground using
 
 - [How to obtain photo data/metadata after being picked in PHPickerViewController?](https://developer.apple.com/forums/thread/654898)
 
+- [CoreImageFilterReference ](https://developer.apple.com/library/archive/documentation/GraphicsImaging/Reference/CoreImageFilterReference/index.html)
+
 - [Creates a background color based on the average color of an image](https://github.com/bbaars/UIImageAverageColor)
 
   - [Article](https://medium.com/swlh/swiftui-read-the-average-color-of-an-image-c736adb43000)
