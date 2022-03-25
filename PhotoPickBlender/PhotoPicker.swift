@@ -36,6 +36,9 @@ struct PhotoPicker: UIViewControllerRepresentable {
       parent.pickerResult.removeAll()
       
       for image in results {
+        
+        show_meta(image)
+        
         if image.itemProvider.canLoadObject(ofClass: UIImage.self) {
           image.itemProvider.loadObject(ofClass: UIImage.self) { [weak self] newImage, error in
             if let error = error {
@@ -53,3 +56,45 @@ struct PhotoPicker: UIViewControllerRepresentable {
     }
   }
 }
+
+// Display location and creation date meta data for a photo result
+func show_meta(_ image: PHPickerResult) {
+  if image.itemProvider.hasItemConformingToTypeIdentifier(UTType.image.identifier) {
+    image.itemProvider.loadDataRepresentation(forTypeIdentifier: UTType.image.identifier) { data, error in
+      guard let data = data,
+            let cgImageSource = CGImageSourceCreateWithData(data as CFData, nil),
+            let properties = CGImageSourceCopyPropertiesAtIndex(cgImageSource, 0, nil) else { return }
+            
+      let dict:NSDictionary = properties as NSDictionary;
+      
+      if let val = dict[kCGImagePropertyGPSDictionary] {
+        if let gps = val as? NSDictionary {
+          if let lat = gps["Latitude"] {
+            print("Latitude", lat)
+          }
+          if let lon = gps["Longitude"] {
+            print("Longitude", lon)
+          }
+        }
+      }
+
+      if let val = dict[kCGImagePropertyExifDictionary] {
+        if let exif = val as? NSDictionary {
+          if let ddate = exif["DateTimeOriginal"] {
+            print("ddate", ddate)
+          }
+        }
+      }
+    }
+  }
+}
+
+// https://developer.apple.com/videos/play/wwdc2020/10652/
+// Meet the new Photos picker
+
+// https://developer.apple.com/documentation/photokit/selecting_photos_and_videos_in_ios
+// Selecting Photos and Videos in iOS
+
+// https://developer.apple.com/forums/thread/654898
+// How to obtain photo data/metadata after being picked in PHPickerViewController?
+

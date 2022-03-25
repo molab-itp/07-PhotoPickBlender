@@ -80,7 +80,7 @@ class BlendProcessor {
     blendFilter.backgroundImage = backgroundScaled
     blendFilter.maskImage = maskScaled
     
-    // return blendFilter.outputImage?.oriented(.right)
+//     return blendFilter.outputImage?.oriented(.right)
     return blendFilter.outputImage
   }
   
