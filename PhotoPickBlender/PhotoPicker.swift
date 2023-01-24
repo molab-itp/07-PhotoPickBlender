@@ -94,6 +94,7 @@ func show_meta(_ image: PHPickerResult) {
 
 // https://developer.apple.com/documentation/photokit/selecting_photos_and_videos_in_ios
 // Selecting Photos and Videos in iOS
+// Load Asset Metadata
 
 // https://developer.apple.com/forums/thread/654898
 // How to obtain photo data/metadata after being picked in PHPickerViewController?
