@@ -61,13 +61,13 @@
 		ABF2E73B27ED22D5005A988D /* PhotoPickBlender */ = {
 			isa = PBXGroup;
 			children = (
-				ABF2E75727EE09E7005A988D /* PhotoPickBlender.entitlements */,
 				ABF2E73C27ED22D5005A988D /* PhotoPickBlenderApp.swift */,
 				ABF2E73E27ED22D5005A988D /* ContentView.swift */,
 				ABF2E75127ED2463005A988D /* ImageView.swift */,
 				ABF2E74F27ED2463005A988D /* PhotoPicker.swift */,
 				ABF2E74E27ED2463005A988D /* BlendProcessor.swift */,
 				ABF2E74027ED22D6005A988D /* Assets.xcassets */,
+				ABF2E75727EE09E7005A988D /* PhotoPickBlender.entitlements */,
 				ABF2E74227ED22D6005A988D /* Preview Content */,
 			);
 			path = PhotoPickBlender;
