@@ -1,6 +1,7 @@
 # 07-PhotoPickBlender
 
-Select two images from photo library to blend as background and foreground using Vision VNGeneratePersonSegmentationRequest
+- Select two images from photo library to blend as background and foreground using Vision VNGeneratePersonSegmentationRequest
+- Run in Mac Catayst to access Photo library on Desktop
 
 ## Resources
 
