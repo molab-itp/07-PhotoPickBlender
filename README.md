@@ -1,6 +1,9 @@
-# 07-PhotoPickBlender
+# [07-PhotoPickBlender](https://github.com/molab-itp/07-PhotoPickBlender)
 
 - Select two images from photo library to blend as background and foreground using Vision VNGeneratePersonSegmentationRequest
+
+- how to use legacy api via UIViewControllerRepresentable
+
 - Run in Mac Catayst to access Photo library on Desktop
 
 ## Resources
